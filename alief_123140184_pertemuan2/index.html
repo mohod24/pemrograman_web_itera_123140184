@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Dashboard - 123140184</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Personal Dashboard</h1>
+        <p>Tempat dimana kamu bisa kelola informasi pribadi dengan mudah</p>
+      </div>
+
+      <div class="dashboard-content">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>Total Tugas</h3>
+            <div class="number" id="taskCount">0</div>
+          </div>
+          <div class="stat-card">
+            <h3>Total Catatan</h3>
+            <div class="number" id="noteCount">0</div>
+          </div>
+          <div class="stat-card">
+            <h3>Total Jadwal</h3>
+            <div class="number" id="scheduleCount">0</div>
+          </div>
+          <div class="stat-card">
+            <h3>Total Item</h3>
+            <div class="number" id="totalCount">0</div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Tambah Item Baru</h2>
+          <form id="addForm">
+            <div class="form-group">
+              <div class="input-wrapper">
+                <label for="itemType">Tipe Item *</label>
+                <select id="itemType" required>
+                  <option value="">Pilih Tipe</option>
+                  <option value="task">Tugas</option>
+                  <option value="note">Catatan</option>
+                  <option value="schedule">Jadwal</option>
+                </select>
+              </div>
+              <div class="input-wrapper">
+                <label for="itemTitle">Judul *</label>
+                <input
+                  type="text"
+                  id="itemTitle"
+                  placeholder="Inputkan judul"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-wrapper">
+                <label for="itemCategory">Kategori *</label>
+                <input
+                  type="text"
+                  id="itemCategory"
+                  placeholder="Contoh: Pekerjaan, Pribadi, Kuliah"
+                  required
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="itemDate">Tanggal</label>
+                <input type="date" id="itemDate" />
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <label for="itemDescription">Deskripsi</label>
+              <textarea
+                id="itemDescription"
+                placeholder="Masukkan deskripsi (opsional)"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Tambahkan Item
+            </button>
+          </form>
+        </div>
+
+        <div class="items-section">
+          <h2>Daftar Item</h2>
+
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="Cari item..." />
+          </div>
+
+          <div class="tabs">
+            <button class="tab active" data-type="all">Semua</button>
+            <button class="tab" data-type="task">Tugas</button>
+            <button class="tab" data-type="note">Catatan</button>
+            <button class="tab" data-type="schedule">Jadwal</button>
+          </div>
+
+          <div class="items-grid" id="itemsGrid">
+            <div class="empty-state">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                ></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+              </svg>
+              <p>Belum ada item. Tambahkan item pertama Anda!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="editModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Edit Item</h2>
+          <button class="close-modal" data-dismiss="modal">×</button>
+        </div>
+        <form id="editForm">
+          <input type="hidden" id="editItemId" />
+          <div class="input-wrapper" style="margin-bottom: 15px">
+            <label for="editItemType">Tipe Item *</label>
+            <select id="editItemType" required>
+              <option value="task">Tugas</option>
+              <option value="note">Catatan</option>
+              <option value="schedule">Jadwal</option>
+            </select>
+          </div>
+          <div class="input-wrapper" style="margin-bottom: 15px">
+            <label for="editItemTitle">Judul *</label>
+            <input type="text" id="editItemTitle" required />
+          </div>
+          <div class="input-wrapper" style="margin-bottom: 15px">
+            <label for="editItemCategory">Kategori *</label>
+            <input type="text" id="editItemCategory" required />
+          </div>
+          <div class="input-wrapper" style="margin-bottom: 15px">
+            <label for="editItemDate">Tanggal</label>
+            <input type="date" id="editItemDate" />
+          </div>
+          <div class="input-wrapper" style="margin-bottom: 20px">
+            <label for="editItemDescription">Deskripsi</label>
+            <textarea id="editItemDescription"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Simpan Perubahan
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

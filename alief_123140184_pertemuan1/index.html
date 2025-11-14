@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manajemen Tugas Mahasiswa</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header class="header">
+        <h1>Manajemen Tugas Mahasiswa</h1>
+      </header>
+
+      <!-- Statistics Cards -->
+      <div class="stats-grid">
+        <div class="stat-card stat-total">
+          <div class="stat-content">
+            <div>
+              <p class="stat-label">Total Tugas</p>
+              <p class="stat-value" id="totalTasks">0</p>
+            </div>
+            <div class="stat-icon stat-icon-blue">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card stat-incomplete">
+          <div class="stat-content">
+            <div>
+              <p class="stat-label">Belum Selesai</p>
+              <p class="stat-value" id="incompleteTasks">0</p>
+            </div>
+            <div class="stat-icon stat-icon-yellow">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="stat-card stat-complete">
+          <div class="stat-content">
+            <div>
+              <p class="stat-label">Selesai</p>
+              <p class="stat-value" id="completedTasks">0</p>
+            </div>
+            <div class="stat-icon stat-icon-green">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <div class="main-grid">
+        <!-- Form Section -->
+        <div class="form-section">
+          <div class="card form-card">
+            <div class="card-header">
+              <h2 class="card-title">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19"></line>
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                Tambah Tugas Baru
+              </h2>
+            </div>
+            <div class="card-content">
+              <form id="taskForm">
+                <div class="form-group">
+                  <label for="taskName"
+                    >Nama Tugas <span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="taskName"
+                    placeholder="Contoh: Tugas Algoritma - Sorting"
+                    required
+                  />
+                  <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="taskCourse"
+                    >Mata Kuliah <span class="required">*</span></label
+                  >
+                  <input
+                    type="text"
+                    id="taskCourse"
+                    placeholder="Contoh: Algoritma dan Pemrograman"
+                    required
+                  />
+                  <span class="error-message" id="courseError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="taskDeadline"
+                    >Deadline <span class="required">*</span></label
+                  >
+                  <input type="date" id="taskDeadline" required />
+                  <span class="error-message" id="deadlineError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                  Tambah Tugas
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Task List Section -->
+        <div class="task-list-section">
+          <div class="card">
+            <div class="card-header">
+              <h2 class="card-title">Daftar Tugas</h2>
+            </div>
+            <div class="card-content">
+              <!-- Search -->
+              <div class="search-container">
+                <svg
+                  class="search-icon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input
+                  type="text"
+                  id="searchInput"
+                  placeholder="Cari tugas atau mata kuliah..."
+                  class="search-input"
+                />
+              </div>
+
+              <!-- Filters -->
+              <div class="filter-buttons">
+                <button class="btn btn-filter active" data-filter="all">
+                  Semua (<span id="filterAllCount">0</span>)
+                </button>
+                <button
+                  class="btn btn-filter btn-filter-incomplete"
+                  data-filter="incomplete"
+                >
+                  Belum Selesai (<span id="filterIncompleteCount">0</span>)
+                </button>
+                <button
+                  class="btn btn-filter btn-filter-complete"
+                  data-filter="completed"
+                >
+                  Selesai (<span id="filterCompleteCount">0</span>)
+                </button>
+              </div>
+
+              <!-- Task List -->
+              <div id="taskList" class="task-list">
+                <!-- Tasks will be inserted here -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+      <div class="toast-content">
+        <span id="toastMessage"></span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

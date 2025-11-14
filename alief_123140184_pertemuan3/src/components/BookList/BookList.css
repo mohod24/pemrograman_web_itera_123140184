@@ -1,0 +1,291 @@
+.book-list {
+  display: grid;
+  gap: 1.25rem;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(135deg, rgba(102, 126, 234, 0.15), rgba(118, 75, 162, 0.15))
+      border-box;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  gap: 1.5rem;
+}
+
+.book-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(102, 126, 234, 0.05),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.book-item:hover::before {
+  left: 100%;
+}
+
+.book-item:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 32px rgba(102, 126, 234, 0.15);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.book-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.book-info h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d3748;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.3;
+}
+
+.book-info h4::before {
+  content: "📖";
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.book-info p {
+  margin: 0 0 0.75rem 0;
+  color: #718096;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.book-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.book-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+/* Modern Button Styles */
+.btn-edit,
+.btn-delete {
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  letter-spacing: 0.01em;
+}
+
+.btn-edit {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+}
+
+.btn-edit::before {
+  content: "✏️";
+  font-size: 0.875rem;
+}
+
+.btn-edit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(251, 191, 36, 0.4);
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.btn-edit:active {
+  transform: translateY(0);
+}
+
+.btn-delete {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(248, 113, 113, 0.3);
+}
+
+.btn-delete::before {
+  content: "🗑️";
+  font-size: 0.875rem;
+}
+
+.btn-delete:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(248, 113, 113, 0.4);
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.btn-delete:active {
+  transform: translateY(0);
+}
+
+/* Status Badges with Modern Design */
+.status-badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+}
+
+.status-badge::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 3s infinite;
+}
+
+.status-beli {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.status-beli::before {
+  content: "🛒";
+}
+
+.status-baca {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.status-baca::before {
+  content: "📚";
+}
+
+.status-milik {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+}
+
+.status-milik::before {
+  content: "✅";
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #718096;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.empty-state::before {
+  content: "📚";
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .book-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
+  }
+
+  .book-info h4 {
+    font-size: 1.1rem;
+  }
+
+  .book-actions {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    width: 100%;
+  }
+}
