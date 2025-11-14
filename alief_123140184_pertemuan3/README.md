@@ -12,15 +12,12 @@ Berikut adalah tampilan dari aplikasi yang sudah jadi.
 
 ### Halaman Utama (Tambah, Filter, & Daftar Buku)
 
-(Catatan: Ambil screenshot halaman utama Anda dan letakkan di sini. Anda bisa _drag-and-drop_ file gambar ke GitHub/GitLab setelah Anda push.)
-
-**[SCREENSHOT_HOMEPAGE_ANDA_DI_SINI.png]**
+<img width="1919" height="918" alt="image" src="https://github.com/user-attachments/assets/60a3b56e-0305-4dc6-8659-66fd7187c66b" />
 
 ### Halaman Statistik
 
-(Catatan: Ambil screenshot halaman statistik Anda.)
+<img width="1919" height="920" alt="image" src="https://github.com/user-attachments/assets/aaaa57f7-3645-4393-bcd0-27ecac9272ff" />
 
-**[SCREENSHOT_STATS_PAGE_ANDA_DI_SINI.png]**
 
 ---
 
@@ -137,7 +134,8 @@ Proyek ini menerapkan **5 _unit tests_** menggunakan **Vitest** dan **React Test
 
 (Catatan: Jalankan `npm test` di terminal Anda, ambil screenshot hasilnya, dan letakkan di sini.)
 
-**[SCREENSHOT_HASIL_NPM_TEST_ANDA_DI_SINI.png]**
+<img width="1006" height="913" alt="image" src="https://github.com/user-attachments/assets/3cd5ce69-d706-411c-ae45-db5a351b5a04" />
+
 
 ### Penjelasan Tes yang Dibuat
 
