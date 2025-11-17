@@ -74,6 +74,23 @@ python 184_pertemuan4.py
 
 ---
 
+## Dokumentasi Pengujian
+
+- Skenario 1: Tampilan Awal & Menampilkan Data
+<img width="960" height="594" alt="image" src="https://github.com/user-attachments/assets/14ae926a-390c-43c6-a36b-14434d7a85ac" />
+
+- Skenario 2: Input Data Mahasiswa Baru
+<img width="757" height="486" alt="image" src="https://github.com/user-attachments/assets/5f128e88-1033-45c1-8762-18239ec05416" />
+
+- Skenario 3: Filter Grade, Nilai Tertinggi & Nilai Terendah
+<img width="855" height="594" alt="image" src="https://github.com/user-attachments/assets/24e6e290-50aa-4b85-82b0-04665619f745" />
+
+<img width="519" height="394" alt="image" src="https://github.com/user-attachments/assets/0c6a48db-4e56-48ca-8b51-8c1c9485a15b" />
+
+<img width="527" height="405" alt="image" src="https://github.com/user-attachments/assets/6bfbd320-d409-4cc6-a868-6cfaeaf2d61a" />
+
+---
+
 ## 👤 Identitas Pembuat
 
 - **Nama:** Mohd. Musyaffa Alief Athallah
