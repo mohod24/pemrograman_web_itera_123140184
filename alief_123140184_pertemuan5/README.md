@@ -76,13 +76,14 @@ Berikut adalah penjelasan detail mengenai bagaimana kode program memenuhi kriter
 
 ## Screenshot & Diagram
 
-_(Running Program)_
+_Running Program_
 
 <img width="595" height="786" alt="image" src="https://github.com/user-attachments/assets/50e9ed92-2c80-4f3c-9207-b196deb39979" />
 
 <img width="762" height="628" alt="image" src="https://github.com/user-attachments/assets/df1e0b85-e986-4897-b450-b0a85957588e" />
 
 <img width="766" height="802" alt="image" src="https://github.com/user-attachments/assets/30aa3fab-5742-4aa5-b2f4-82563ad2b7b0" />
+
 
 _Diagram Class_
 
