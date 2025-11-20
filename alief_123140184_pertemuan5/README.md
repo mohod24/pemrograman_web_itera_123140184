@@ -10,17 +10,7 @@ Program ini memungkinkan pengguna untuk mengelola inventaris perpustakaan yang t
 
 ## Struktur File & Direktori
 
-```text
-alief_123140184_pertemuan5/
-│
-├── modules/ # [PACKAGE] Berisi logika inti OOP
-│ ├── **init**.py # File penanda package Python
-│ ├── base.py # Berisi Abstract Class (LibraryItem)
-│ ├── items.py # Berisi Concrete Classes (Book & Magazine)
-│ └── library.py # Berisi Class Manajer (Library) untuk pengelolaan data
-│
-├── main.py # [ENTRY POINT] File utama untuk menjalankan program/menu
-└── README.md # Dokumentasi lengkap project
+<img width="286" height="245" alt="image" src="https://github.com/user-attachments/assets/5fdf33ae-0317-4a07-a6d7-c0e55b67e2a6" />
 
 ## Persyaratan Sistem & Instalasi
 
@@ -86,8 +76,15 @@ Berikut adalah penjelasan detail mengenai bagaimana kode program memenuhi kriter
 
 ## Screenshot & Diagram
 
-_(Tempatkan screenshot hasil running program kamu di sini)_
-_(Tempatkan gambar Diagram Class di sini)_
+_(Running Program)_
+<img width="595" height="786" alt="image" src="https://github.com/user-attachments/assets/50e9ed92-2c80-4f3c-9207-b196deb39979" />
+
+<img width="762" height="628" alt="image" src="https://github.com/user-attachments/assets/df1e0b85-e986-4897-b450-b0a85957588e" />
+
+<img width="766" height="802" alt="image" src="https://github.com/user-attachments/assets/30aa3fab-5742-4aa5-b2f4-82563ad2b7b0" />
+
+_Diagram Class_
+<img width="1121" height="708" alt="image" src="https://github.com/user-attachments/assets/5ccc2cf5-b86d-4447-9baa-be0d601ade38" />
 
 ---
 
