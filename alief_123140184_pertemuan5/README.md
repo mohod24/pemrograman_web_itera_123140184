@@ -77,6 +77,7 @@ Berikut adalah penjelasan detail mengenai bagaimana kode program memenuhi kriter
 ## Screenshot & Diagram
 
 _(Running Program)_
+
 <img width="595" height="786" alt="image" src="https://github.com/user-attachments/assets/50e9ed92-2c80-4f3c-9207-b196deb39979" />
 
 <img width="762" height="628" alt="image" src="https://github.com/user-attachments/assets/df1e0b85-e986-4897-b450-b0a85957588e" />
@@ -84,9 +85,10 @@ _(Running Program)_
 <img width="766" height="802" alt="image" src="https://github.com/user-attachments/assets/30aa3fab-5742-4aa5-b2f4-82563ad2b7b0" />
 
 _Diagram Class_
+
 <img width="1121" height="708" alt="image" src="https://github.com/user-attachments/assets/5ccc2cf5-b86d-4447-9baa-be0d601ade38" />
 
 ---
 
-**Author:** Mohd.Musyaffa Alief Athallah
-**NIM:** 123140194
+- **Author:** Mohd.Musyaffa Alief Athallah
+- **NIM:** 123140194
