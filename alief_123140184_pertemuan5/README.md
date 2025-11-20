@@ -10,6 +10,7 @@ Program ini memungkinkan pengguna untuk mengelola inventaris perpustakaan yang t
 
 ## Struktur File & Direktori
 
+```text
 alief_123140184_pertemuan5/
 │
 ├── modules/ # [PACKAGE] Berisi logika inti OOP
