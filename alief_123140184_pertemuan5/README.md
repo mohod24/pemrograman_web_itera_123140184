@@ -84,7 +84,6 @@ _Running Program_
 
 <img width="766" height="802" alt="image" src="https://github.com/user-attachments/assets/30aa3fab-5742-4aa5-b2f4-82563ad2b7b0" />
 
-
 _Diagram Class_
 
 <img width="1121" height="708" alt="image" src="https://github.com/user-attachments/assets/5ccc2cf5-b86d-4447-9baa-be0d601ade38" />

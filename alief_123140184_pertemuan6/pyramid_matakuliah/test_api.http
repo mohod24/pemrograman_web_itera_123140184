@@ -1,0 +1,28 @@
+### 1. GET: Cek data (Harusnya masih kosong [])
+GET http://localhost:6543/api/matakuliah
+
+### 2. POST: Tambah Matakuliah Baru
+POST http://localhost:6543/api/matakuliah
+Content-Type: application/json
+
+{
+    "kode_mk": "IF1232",
+    "nama_mk": "Pemrograman WEB RA",
+    "sks": 3,
+    "semester": 5
+}
+
+### 3. GET: Cek lagi (Harusnya data di atas muncul)
+GET http://localhost:6543/api/matakuliah
+
+### 4. PUT: Ubah data (Misal ganti nama jadi Pemrograman Web Lanjut)
+# Ganti angka /1 dengan ID yang muncul di respon langkah 2
+PUT http://localhost:6543/api/matakuliah/6
+Content-Type: application/json
+
+{
+    "nama_mk": "Jaringan Komputer"
+}
+
+### 5. DELETE: Hapus data
+DELETE http://localhost:6543/api/matakuliah/9
